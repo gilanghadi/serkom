@@ -157,7 +157,7 @@ $beasiswa = mysqli_query($conn, "SELECT * FROM beasiswa");
                                         <label for="berkas" class="form-label">Upload Berkas Syarat</label>
                                     </div>
                                     <div class="col-lg-6">
-                                        <input type="file" name="berkas" id="berkas" required>
+                                        <input type="file" name="berkas" id="berkas" class="form-control" required>
                                     </div>
                                 </div>
                                 <div class="d-flex p-4 row">
