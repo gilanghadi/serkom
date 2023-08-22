@@ -3,6 +3,7 @@ $thispage = "index";
 require "./app/init.php";
 require "./app/database/conn.php";
 
+// process insert data pendaftaran
 if (isset($_POST['submit'])) {
     $nama = mysqli_real_escape_string($conn, $_POST['nama']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
@@ -12,6 +13,7 @@ if (isset($_POST['submit'])) {
     $beasiswa = mysqli_real_escape_string($conn, $_POST['beasiswa']);
     $file = upload($_FILES['berkas']);
 
+    // filter email
     function filter_email($email)
     {
         if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -29,6 +31,7 @@ if (isset($_POST['submit'])) {
 }
 
 
+// function upload file image
 function upload($file)
 {
     $nameFile = $file['name'];
@@ -61,6 +64,7 @@ function upload($file)
 }
 
 
+// flash message session
 function Flash($type, $message)
 {
     $_SESSION['flash'] = [
@@ -70,7 +74,7 @@ function Flash($type, $message)
 }
 
 
-
+// query data beasiswa
 $beasiswa = mysqli_query($conn, "SELECT * FROM beasiswa");
 
 ?>

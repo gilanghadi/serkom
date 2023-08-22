@@ -3,6 +3,7 @@ $thispage = "beasiswa";
 require "../init.php";
 require "../database/conn.php";
 
+// query status beasiswa
 $beasiswaAkademik = mysqli_query($conn, "SELECT * FROM beasiswa WHERE status = 'akademik'");
 $beasiswaNonAkademik = mysqli_query($conn, "SELECT * FROM beasiswa WHERE status != 'akademik'");
 

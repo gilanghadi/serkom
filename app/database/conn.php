@@ -1,5 +1,6 @@
 <?php
 
+// connection database mysql
 
 $DBHOST = "localhost";
 $DBUSER = "root";

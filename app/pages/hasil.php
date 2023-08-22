@@ -3,6 +3,7 @@ $thispage = "hasil";
 require "../init.php";
 require "../database/conn.php";
 
+// query data relationship between pendaftaran and beasiswa
 $daftars = query("SELECT * FROM pendaftaran INNER JOIN beasiswa ON pendaftaran.beasiswa = beasiswa.id");
 
 ?>
