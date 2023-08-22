@@ -3,7 +3,7 @@
 
 $DBHOST = "localhost";
 $DBUSER = "root";
-$DBPASS = "";
+$DBPASS = "addict0x021";
 $DBNAME = "serkom";
 
 
