@@ -220,6 +220,7 @@ $beasiswa = mysqli_query($conn, "SELECT * FROM beasiswa");
                 'success'
             )
         </script>
+        <?php unset($_SESSION['flash']); ?>
     <?php endif; ?>
 </body>
 
