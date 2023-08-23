@@ -1,5 +1,5 @@
 <?php
-$thispage = "index";
+$thisPage = "index";
 require "./app/init.php";
 require "./app/database/conn.php";
 
@@ -7,7 +7,7 @@ require "./app/database/conn.php";
 if (isset($_POST['submit'])) {
     $nama = mysqli_real_escape_string($conn, $_POST['nama']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
-    $nomor_hp = mysqli_real_escape_string($conn, $_POST['nomor_hp']);
+    $nomorHp = mysqli_real_escape_string($conn, $_POST['nomor_hp']);
     $semester = mysqli_real_escape_string($conn, $_POST['semester']);
     $IPK = mysqli_real_escape_string($conn, $_POST['ipk']);
     $beasiswa = mysqli_real_escape_string($conn, $_POST['beasiswa']);
@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
         }
     }
 
-    $query = mysqli_query($conn, "INSERT INTO pendaftaran VALUES('', '$nama', '$email', $nomor_hp, '$semester', $IPK, '$beasiswa', '$file', false)");
+    $query = mysqli_query($conn, "INSERT INTO pendaftaran VALUES('', '$nama', '$email', $nomorHp, '$semester', $IPK, '$beasiswa', '$file', false)");
     if ($query) {
         Flash("success", "Pendaftaran Berhasil!, Tunggu Konfirmasi Selanjutnya.");
     }
@@ -104,7 +104,7 @@ $beasiswa = mysqli_query($conn, "SELECT * FROM beasiswa");
         <div class="row">
             <div class="d-flex justify-content-center align-items-center">
                 <div class="col-lg-8">
-                    <h1 class="mb-4 text-center text-primary">Daftar Calon Beasiswa</h1>
+                    <h1 class="mb-4 text-center text-primary">Daftar Beasiswa</h1>
                     <div class="card">
                         <div class="card-header">Registrasi Mahasiswa</div>
                         <div class="card-body">
@@ -203,7 +203,7 @@ $beasiswa = mysqli_query($conn, "SELECT * FROM beasiswa");
     <script type="text/javascript">
         $(document).ready(function() {
             $('#semester').change(function() {
-                $('#ipk').val(3);
+                $('#ipk').val(2);
                 if ($('#ipk').val() < 3) {
                     $('#beasiswa').attr("disabled", true);
                     $('#berkas').attr("disabled", true);

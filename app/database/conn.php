@@ -4,7 +4,7 @@
 
 $DBHOST = "localhost";
 $DBUSER = "root";
-$DBPASS = "addict0x021";
+$DBPASS = "";
 $DBNAME = "serkom";
 
 

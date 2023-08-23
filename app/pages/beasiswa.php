@@ -1,5 +1,5 @@
 <?php
-$thispage = "beasiswa";
+$thisPage = "beasiswa";
 require "../init.php";
 require "../database/conn.php";
 

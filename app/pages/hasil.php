@@ -1,5 +1,5 @@
 <?php
-$thispage = "hasil";
+$thisPage = "hasil";
 require "../init.php";
 require "../database/conn.php";
 
@@ -54,8 +54,10 @@ $daftars = query("SELECT * FROM pendaftaran INNER JOIN beasiswa ON pendaftaran.b
                             </span>
                             <p>Mengikuti Beasiswa : <?= $daftar['nama_beasiswa'] ?></p>
                             <p>Status :
-                                <?php if (isset($daftar['status'])) : ?>
+                                <?php if (!isset($daftar['status'])) : ?>
                                     <span class="bg-secondary rounded px-2 py-1 text-white">Belum Diverifikasi</span>
+                                <?php else : ?>
+                                    <span class="bg-secondary rounded px-2 py-1 text-white">Diverifikasi</span>
                                 <?php endif; ?>
                             </p>
                         </div>
