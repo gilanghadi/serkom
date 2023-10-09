@@ -1,5 +1,6 @@
 ## STRUCTURE FOLDER 
 
+```php
 📦app
  ┣ 📂database
  ┃ ┗ 📜conn.php // connection database
@@ -20,3 +21,4 @@
 📜index.php // main index
 📜Readme.md
 📜serkom.sql // database sql
+```
